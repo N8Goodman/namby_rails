@@ -1,0 +1,34 @@
+<h1>Baby Names</h1>
+ <%= render 'form' %>
+
+
+ <h3>Exclude Names:</h3>
+ <ul>
+   <% @bads.each do |name| %>
+    <li><%= name %></li>
+   <% end %>
+ </ul>
+  <%= render './bads/form' %>
+ <br>
+<ul>
+  <% @results.each do |kid| %>
+    <% if kid.users.include?(current_user) %>
+      <div class="favorite">
+        <li>
+          <%= kid.name %>
+        </li>
+      </div>
+    <% else %>
+      <div class="non_favorite">
+        <li>
+          <%= kid.name %>
+          <%= button_to 'Best Answer', result_kid_path(@result, kid), method: :patch %>
+        </li>
+      </div>
+    <% end %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "Again?", edit_result_path(@result) %>
+<%= link_to "Home", new_result_path %>

@@ -1,0 +1,9 @@
+<h1>Favorite Names:</h1>
+<ul>
+  <% @favorites.each do |name| %>
+    <li>
+      <%= name.kid.name %>
+      <%= button_to 'Remove Favorite', user_favorite_path(current_user, name), method: :delete %>
+   </li>
+  <% end %>
+</ul>

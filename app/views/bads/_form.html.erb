@@ -1,0 +1,7 @@
+<%= form_for [@result, @bad] do |f| %>
+  <div class="">
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+  </div>
+  <%= f.submit "Exclude Name:" %>
+<% end %>

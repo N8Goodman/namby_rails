@@ -1,0 +1,6 @@
+<h1>Previous Searches:</h1>
+<ol>
+  <% @results.each do |search| %>
+  <li> <%= link_to search.name, edit_result_path(search) %> </li>
+  <% end %>
+</ol>
