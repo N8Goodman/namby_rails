@@ -22,7 +22,7 @@
       <div class="non_favorite">
         <li>
           <%= kid.name %>
-          <%= button_to 'Best Answer', result_kid_path(@result, kid), method: :patch %>
+          <%= button_to 'Favorite', result_kid_path(@result, kid), method: :patch %>
         </li>
       </div>
     <% end %>

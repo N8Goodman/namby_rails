@@ -4,7 +4,7 @@ class ResultsController < ApplicationController
       flash[:error] = "Please sign in"
       redirect_to new_session_path
     else
-      @results = Result.all
+      @results = Result.where(user: current_user)
     end
   end
 
@@ -42,6 +42,7 @@ class ResultsController < ApplicationController
       redirect_to new_session_path
     else
       @result = Result.new(result_params)
+      @result.user = current_user
       if @result.save
         redirect_to edit_result_path(@result)
       end

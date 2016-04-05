@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'redcarpet'
-gem 'rake','11.1.1'
+gem 'rake','11.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
