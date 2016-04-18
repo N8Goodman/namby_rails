@@ -1,8 +1,0 @@
-<div class="bar">
-  <%= link_to 'Home', new_result_path if current_user %>
-  <%= link_to 'Register', new_registration_path unless current_user %>
-  <%= link_to 'Sign in', new_session_path unless current_user %>
-  <%= link_to 'Saved searches', results_path if current_user %>
-  <%= link_to 'Favorite names', user_favorites_path(current_user) if current_user %>
-  <%= button_to("Sign out", session_path(current_user), method: :delete) if current_user %>
-</div>
