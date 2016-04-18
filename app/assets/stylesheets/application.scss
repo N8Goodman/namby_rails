@@ -47,21 +47,42 @@
   top: auto;
 }
 
-/* Links inside the dropdown */
 .rollover-content a {
     color: #fff;
     font-size: 28px;
     font-family: "bloggerSans";
     padding: 12px 16px;
-    display: inline-block;;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+.rollover-content a:hover {
+    color: #fff;
+    font-size: 28px;
+    font-family: "bloggerSans";
+    padding: 12px 16px;
+    display: inline-block;
+}
+
+/* Links inside the dropdown */
+.rollover-content a:before {
+    display: inline-block;
+    visibility: hidden;
+    content: "";
+    background-color: #000;
+    height: 2px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 /* Change color of rollover links on hover */
-.rollover-content a:hover {
-  color: #fff;
-  font-size: 28px;
-  font-family: "bloggerSans";
-  text-decoration: underline;
+.rollover-content a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 /* splash container */
