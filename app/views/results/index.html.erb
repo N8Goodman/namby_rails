@@ -1,6 +1,11 @@
 <h1>Previous Searches:</h1>
-<ol>
-  <% @results.each do |search| %>
-  <li> <%= link_to search.name, edit_result_path(search) %> </li>
-  <% end %>
-</ol>
+  <ul>
+    <% @results.each do |search| %>
+      <% if !search.name.empty? %>
+        <li>
+          <%= link_to search.name, edit_result_path(search) %> </li>
+          <%= button_to "Remove Saved Search", result_path(search), method: :delete %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>

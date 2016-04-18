@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Namby</title>
-  <%= csrf_meta_tags %>
-</head>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "nambino | your personal baby name generator" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
 <body>
-  <div class="notices">
-    <% flash.each do |name, msg| %>
-      <% if msg.is_a?(String) %>
-        <%= content_tag :div, msg, :class => "flash_#{name}" %>
-      <% end %>
-    <% end %>
-  </div>
-  <br>
-  <div class="bar">
-    <%= link_to 'Home', new_result_path if current_user %>
-    <%= link_to 'Sign Up', new_registration_path unless current_user %>
-    <%= link_to 'Sign In', new_session_path unless current_user %>
-    <%= link_to 'Prior Searches', results_path if current_user %>
-    <%= link_to 'Favorites', user_favorites_path(current_user) if current_user %>
-    <%= button_to("Sign Out", session_path(current_user), method: :delete) if current_user %>
-  </div>
-
-
-<%= yield %>
-
+    <div class="row column">
+      <%= render "layouts/navbar" %>
+      <%= render "layouts/notices" %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
 </body>
 </html>

@@ -1,0 +1,51 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+  @import "_settings";
+
+  h1 { font-family: $header-font-family; font-size: 36px; font-weight: $header-font-weight; }
+  h2 { font-family: $header-font-family; font-size: 32px; font-weight: $header-font-weight; }
+  h3 { font-family: $header-font-family; font-size: 28px; font-weight: $header-font-weight; }
+  body { color: $body-font-color; font-family: $body-font-family; font-weight: $body-font-weight; font-size: $body-font-size; }
+  ul { list-style-type: none; }
+  li { list-style-type: none; }
+
+
+ .bgImageContainer {
+  background-image: url(/assets/namby_splash.jpg);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#splash-wrapper {
+  padding: 15%;
+  opacity: 0.98;
+}
+
+#splash {
+  padding: 8%;
+  border: 0;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  background-color: #F4F4F4;
+  opacity: 0.98;
+}

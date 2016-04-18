@@ -44,9 +44,7 @@ class Result < ActiveRecord::Base
   has_many :bads
   belongs_to :user
 
-  validates :count,
-  presence: true
-  validates :name, presence: true
+  validates :count, presence: true
   validates :gender, presence: true, inclusion: {in: ['boy','girl']}
   validates :starts_with, length: {is: 1}, allow_nil: true
   validates :ends_with, length: {is: 1}, allow_nil: true
