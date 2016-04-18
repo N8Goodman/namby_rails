@@ -12,10 +12,9 @@ class RegistrationsController < ApplicationController
     @user = User.new(sign_up_params)
     if @user.save
       flash[:notice] = "Thank you for registering."
-      current_user
       redirect_to new_result_path
     else
-      flash[:errors] = @user.errors.full_messages.join(", ")
+      flash[:errors] = @user.errors.full_messages.join(". ")
       redirect_to new_registration_path
     end
   end
