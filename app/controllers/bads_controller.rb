@@ -16,5 +16,4 @@ class BadsController < ApplicationController
     :name
     )
   end
-
 end

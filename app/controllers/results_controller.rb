@@ -1,8 +1,8 @@
 class ResultsController < ApplicationController
   def index
     unless current_user
-      flash[:error] = "Please sign in"
-      redirect_to new_session_path
+      flash[:error] = "Please register or sign in."
+      redirect_to sessions_path
     else
       @results = Result.where(user: current_user)
     end
@@ -10,8 +10,8 @@ class ResultsController < ApplicationController
 
   def new
     unless current_user
-    flash[:error] = "Please sign in"
-    redirect_to new_session_path
+      flash[:error] = "Please register or sign in."
+      redirect_to sessions_path
     else
       @gender_collection = Result::GENDER
       @letter_collection = Result::ALPHABET
@@ -22,8 +22,8 @@ class ResultsController < ApplicationController
 
   def edit
     unless current_user
-      flash[:error] = "Please sign in"
-      redirect_to new_session_path
+      flash[:error] = "Please register or sign in."
+      redirect_to sessions_path
     else
       @result = Result.find(params[:id])
       @gender_collection = Result::GENDER
@@ -38,8 +38,8 @@ class ResultsController < ApplicationController
 
   def create
     unless current_user
-      flash[:error] = "Please sign in"
-      redirect_to new_session_path
+      flash[:error] = "Please register or sign in."
+      redirect_to sessions_path
     else
       @result = Result.new(result_params)
       @result.user = current_user
@@ -51,14 +51,22 @@ class ResultsController < ApplicationController
 
   def update
     unless current_user
-      flash[:error] = "Please sign in"
-      redirect_to new_session_path
+      flash[:error] = "Please register or sign in."
+      redirect_to sessions_path
     else
       @result = Result.find(params[:id])
       @result.update(result_params)
       if @result.save
         redirect_to edit_result_path(@result)
       end
+    end
+  end
+
+  def destroy
+    @result = Result.find(params[:id])
+    if @result.destroy!
+      flash[:notice] = "Your saved search has been removed."
+      redirect_to results_path(current_user)
     end
   end
 

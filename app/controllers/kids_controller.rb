@@ -13,11 +13,9 @@ class KidsController < ApplicationController
       @kid = Kid.find(params[:id])
       @favorite = Favorite.new(user: @user, kid: @kid )
       if @favorite.save
-        flash[:notice] = "Name has been marked as a favorite"
+        flash[:notice] = "#{@favorite.kid.name} has been added to your list of favorite names."
         redirect_to edit_result_path(@result)
       end
     end
   end
-
-
 end

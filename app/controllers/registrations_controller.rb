@@ -3,7 +3,7 @@ class RegistrationsController < ApplicationController
     unless current_user
     @user = User.new
     else
-      flash[:notice] = "You are already signed in"
+      flash[:notice] = "You are already signed in."
       redirect_to new_result_path
     end
   end
@@ -11,8 +11,9 @@ class RegistrationsController < ApplicationController
   def create
     @user = User.new(sign_up_params)
     if @user.save
-      flash[:notice] = 'Account created'
-      redirect_to new_session_path
+      flash[:notice] = "Thank you for registering."
+      current_user
+      redirect_to new_result_path
     else
       flash[:errors] = @user.errors.full_messages.join(", ")
       redirect_to new_registration_path
@@ -32,5 +33,4 @@ class RegistrationsController < ApplicationController
     :password_confirmation
     )
   end
-
 end
