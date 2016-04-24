@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
+ *= require foundation
 
  */
   @import "_settings";
@@ -38,6 +38,7 @@
   background-color: #41D1D7;
   position: relative;
   height: auto;
+  height: 100%;
 }
 
 .outer .header {
@@ -60,6 +61,20 @@
   font-size: 22px;
   font-family: "bloggerSans";
   text-decoration: underline;
+}
+
+/* notices */
+
+.notices {
+  height: auto;
+  font-family: "bloggerSans";
+  color: #41D1D7;
+  font-size: 34px;
+  width: 100%;
+}
+
+#wrap-middle {
+  margin-top: 80px;
 }
 
 /* splash container */
@@ -88,4 +103,14 @@
   -webkit-border-radius: 1px;
   background-color: #F4F4F4;
   opacity: 0.98;
+}
+
+input#bad_name {
+  width: 35%;
+  min-width: 200px;
+}
+
+input#result_name {
+  width: 35%;
+  min-width: 200px;
 }
