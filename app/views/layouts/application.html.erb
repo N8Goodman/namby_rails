@@ -12,13 +12,15 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
+
 <body>
-    <div class="row column">
+
+  <div class="container" id="wrap-middle">
+    <div class="column">
       <%= render "layouts/notices" %>
       <%= yield %>
-      <%= render "layouts/footer" %>
     </div>
-
+  </div>
 
     <div class="header">
       <div class="outer">

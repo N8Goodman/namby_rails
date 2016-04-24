@@ -1,31 +1,28 @@
 <%= form_for @search do |f| %>
-<div class="row">
-  <%= f.label :name, "Name to save your search (optional)" %>
-  <%= f.text_field :name %>
-</div>
-
   <div class="row">
-    <%= f.label :gender, "Gender" %>
-    <%= f.select(:gender, options_for_select(@gender_collection)) %>
+    <%= f.label :name, "Name to save your search (optional)" %>
+    <%= f.text_field :name %>
   </div>
 
-  <div class="row">
-    <%= f.label :starts_with, "Starting Letter" %>
-    <%= f.select(:starts_with, options_for_select(@letter_collection)) %>
-  </div>
+    <div class="row">
+      <%= f.label :gender, "Gender" %>
+      <%= f.select(:gender, options_for_select(@gender_collection)) %>
+    </div>
 
-  <div class="row">
-    <%= f.label :ends_with, "Ending Letter" %>
-    <%= f.select(:ends_with, options_for_select(@letter_collection)) %>
-  </div>
+    <div class="row">
+      <%= f.label :starts_with, "Starting Letter" %>
+      <%= f.select(:starts_with, options_for_select(@letter_collection)) %>
+    </div>
 
-  <div class="row">
-    <%= f.label :count, "Number of results" %>
-    <%= f.select(:count, options_for_select(@count_collection)) %>
-  </div>
+    <div class="row">
+      <%= f.label :ends_with, "Ending Letter" %>
+      <%= f.select(:ends_with, options_for_select(@letter_collection)) %>
+    </div>
 
-
-  <div>
-    <%= f.submit "Search" %>
-  </div>
-<% end %>
+    <div class="row">
+      <%= f.label :count, "Number of results" %>
+      <%= f.select(:count, options_for_select(@count_collection)) %>
+    </br>
+      <%= f.submit "Search" %>
+    </div>
+  <% end %>

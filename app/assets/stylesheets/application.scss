@@ -12,14 +12,14 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
+ *= require foundation
 
  */
   @import "_settings";
   @font-face { font-family: "bloggerSans"; src: url("/assets/Blogger_Sans-Medium.otf"); }
 
-  h1 { font-family: "bloggerSans"; font-size: 38px; font-weight: $header-font-weight; }
-  h2 { font-family: "bloggerSans"; font-size: 34px; font-weight: $header-font-weight; }
+  h1 { font-family: "bloggerSans"; font-size: 34px; font-weight: $header-font-weight; }
+  h2 { font-family: "bloggerSans"; font-size: 32px; font-weight: $header-font-weight; }
   h3 { font-family: "bloggerSans"; font-size: 30px; font-weight: $header-font-weight; }
   body { color: $body-font-color; font-family: $body-font-family; font-weight: $body-font-weight; font-size: $body-font-size; }
   ul { list-style-type: none; }
@@ -38,6 +38,7 @@
   background-color: #41D1D7;
   position: relative;
   height: auto;
+  height: 100%;
 }
 
 .outer .header {
@@ -47,21 +48,33 @@
   top: auto;
 }
 
-/* Links inside the dropdown */
 .rollover-content a {
     color: #fff;
-    font-size: 30px;
+    font-size: 22px;
     font-family: "bloggerSans";
-    padding: 12px 16px;
+    padding: 10px 16px;
     display: inline-block;;
 }
 
-/* Change color of rollover links on hover */
 .rollover-content a:hover {
   color: #fff;
-  font-size: 30px;
+  font-size: 22px;
   font-family: "bloggerSans";
   text-decoration: underline;
+}
+
+/* notices */
+
+.notices {
+  height: auto;
+  font-family: "bloggerSans";
+  color: #41D1D7;
+  font-size: 34px;
+  width: 100%;
+}
+
+#wrap-middle {
+  margin-top: 80px;
 }
 
 /* splash container */
@@ -79,7 +92,7 @@
 }
 
 #splash-wrapper {
-  padding: 15%;
+  padding: 8%;
   opacity: 0.98;
 }
 
@@ -90,4 +103,14 @@
   -webkit-border-radius: 1px;
   background-color: #F4F4F4;
   opacity: 0.98;
+}
+
+input#bad_name {
+  width: 35%;
+  min-width: 200px;
+}
+
+input#result_name {
+  width: 35%;
+  min-width: 200px;
 }

@@ -1,12 +1,10 @@
 <h1>Baby Names</h1>
  <%= render 'form' %>
-
-
- <h3>Exclude Names:</h3>
+<h1>Exclude Names</h1>
  <ul>
-   <% @bads.each do |name| %>
+    <% @bads.each do |name| %>
     <li><%= name %></li>
-   <% end %>
+    <% end %>
  </ul>
   <%= render './bads/form' %>
  <br>
@@ -31,4 +29,3 @@
 </ul>
 
 <%= link_to "Again?", edit_result_path(@result) %>
-<%= link_to "Home", new_result_path %>
