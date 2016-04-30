@@ -2,7 +2,7 @@
 
 ###Overview:
 
-A collaborative project built by Nate Goodman (N8Goodman) and Matt McKelvey (mmckv) during the Spring 2016 cohort of Launch Academy.
+A collaborative project built by Nate Goodman ([N8Goodman](https://github.com/N8Goodman)) and Matt McKelvey ([mmckv](https://github.com/mmckv)) during the Spring 2016 cohort of Launch Academy.
 
 Nambino was built as a side project to reinforce the basic skills we had learned for Ruby on Rails, JavaScript and CSS.
 
