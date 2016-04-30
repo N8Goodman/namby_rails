@@ -1,4 +1,6 @@
-Nambino:
+#Nambino:
+
+###Overview:
 
 A collaborative project built by Nate Goodman (N8Goodman) and Matt McKelvey (mmckv) during the Spring 2016 cohort of Launch Academy.
 
@@ -12,6 +14,6 @@ The overall structure of the application is meant to be very basic and straightf
 
 We included the ability to create an account so that a user can revisit prior searches, and favorite names they like.
 
-Future Features:
--The ability to share favorited names with another user
--The ability to poll other users (friends) for which name they like best from a selection of favorites.
+####Future Features:
+* The ability to share favorited names with another user
+* The ability to poll other users (friends) for which name they like best from a selection of favorites.
