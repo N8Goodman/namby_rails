@@ -1,28 +1,17 @@
-== README
+Nambino:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A collaborative project built by Nate Goodman (N8Goodman) and Matt McKelvey (mmckv) during the Spring 2016 cohort of Launch Academy.
 
-Things you may want to cover:
+Nambino was built as a side project to reinforce the basic skills we had learned for Ruby on Rails, JavaScript and CSS.
 
-* Ruby version
+We initially built the app using Ruby and a Sinatra server, however decided to re-build from scratch after learning the Rails framework.
 
-* System dependencies
+The project features the ability to randomly generate potential baby names based on user determined criteria such as: gender, starting letter and ending letter of the name.
 
-* Configuration
+The overall structure of the application is meant to be very basic and straightforward to use, however we did want to add extra features that would be relevant to the end user.
 
-* Database creation
+We included the ability to create an account so that a user can revisit prior searches, and favorite names they like.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Future Features:
+-The ability to share favorited names with another user
+-The ability to poll other users (friends) for which name they like best from a selection of favorites.
